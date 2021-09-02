@@ -10,7 +10,6 @@ import {
     View,
     StyleSheet,
     ActivityIndicator,
-    RefreshControl
 } from 'react-native';
 
 const NewsFeed = () => {
@@ -38,8 +37,6 @@ const NewsFeed = () => {
                     news?.articles?.length ? (
                         <FlatList data={news.articles}
                             keyExtractor={(item, index) => 'key' + index}
-                            // refreshing={isLoading}
-                            // onRefresh={dispatch(getNews())}
                             renderItem={({ item }) => {
                                 return <NewsCard item={item} />
                             }}

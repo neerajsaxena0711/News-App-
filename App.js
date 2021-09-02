@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider} from 'react-redux';
 import { Store } from './src/redux/store';
-import NewsFeed from './src/screens/NewsFeed'
+import NewsFeed from './src/Screens/NewsFeed'
 import {
   StyleSheet,
   SafeAreaView,

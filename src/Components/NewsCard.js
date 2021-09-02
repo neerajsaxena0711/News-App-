@@ -12,6 +12,7 @@ const NewsCard = ({item}) => {
     return (
         <View style={styles.card}>
         <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.source}>{item.source?.name} </Text>
         <Image style={styles.image} source={item.urlToImage ? {uri: item.urlToImage } : null}/>
         <Text style={styles.description}>{item.description}</Text>
     </View>
@@ -38,9 +39,9 @@ const styles = StyleSheet.create({
     },
     description: {
         marginVertical: width * 0.05,
-        marginHorizontal: width * 0.02,
+        marginHorizontal: width * 0.03,
         color: 'gray',
-        fontSize: 18
+        fontSize: 16
     },
     image: {
         height: height / 6,
@@ -48,6 +49,13 @@ const styles = StyleSheet.create({
         marginRight: width * 0.05,
         marginVertical: height * 0.02
     },
+    source: {
+        marginBottom: width * 0.0,
+        marginHorizontal: width * 0.05,
+        fontSize: 12,
+        color: 'gray'
+
+    }
 })
 
 export default NewsCard;
